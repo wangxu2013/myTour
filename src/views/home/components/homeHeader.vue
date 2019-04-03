@@ -28,7 +28,8 @@
     line-height:.6rem
     margin:.2rem .2rem
     border-radius: .5rem
-    -webkit-box-shadow: 0 0 .01rem .02rem #000
+    box-shadow: 0 0 .01rem .02rem #888
+    background: rgba(255,255,255,.8)
   }
   .header-city{
     float:right

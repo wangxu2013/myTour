@@ -7,7 +7,12 @@ import store from './store'
 import '@/assets/style/border.css'
 import '@/assets/style/reset.css'
 import '@/assets/style/iconfont/iconfont.css'
+
 import fastClick from 'fastclick'
+
+import VueAwesomeSwiper from 'vue-awesome-swiper' /* swiper插件 */
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 
