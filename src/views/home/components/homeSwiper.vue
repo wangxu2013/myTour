@@ -13,13 +13,13 @@
 
 <script>
     export default {
-        name: "homeSwiper",
+      name: "homeSwiper",
       data() {
         return {
           headImg:[
-            {id:'001',url:'http://hbimg.b0.upaiyun.com/faca12c5215abdadaef8ff79d5f78ca00f7e3b9423aaa-AeFkLd_fw658'},
-            {id:'002',url:'http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg'},
-            {id:'003',url:'http://pic69.nipic.com/file/20150608/9252150_134415115986_2.jpg'}
+            {id:'001',url:'https://pic5.40017.cn/01/000/31/71/rBANC1sy7-iAaElXAADxiWL4LPo263_520x218_00.jpg'},
+            {id:'002',url:'https://pic5.40017.cn/03/000/74/c0/rBANB1yA6KqAN_r4AAMb_cFjfB4749_520x218_00.jpg'},
+            {id:'003',url:'https://pic5.40017.cn/03/000/e6/fa/rBANB1ybSOSAH-ffAAF-qQMYCa8154_520x218_00.jpg'}
           ],
           swiperOption: {
             // 如果需要分页器
@@ -39,12 +39,11 @@
 
   }
   .wrapper{
-    position:absolute
+    position:relative;
     z-index :0
     width:100%
     .swiper-img{
       width:100%
-      height:300px
     }
   }
 
