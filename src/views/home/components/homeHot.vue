@@ -3,22 +3,22 @@
       <div class="hot-left">
         <div class="left-title">
           限时抢购
-          <span class="time-limit">距结束 <span>{{tjPlace.time1}}</span>:<span>{{tjPlace.time2}}</span>:<span>{{tjPlace.time3}}</span></span>
+          <span class="time-limit">距结束 <span>12</span>:<span>12</span>:<span>12</span></span>
         </div>
         <div class="left-content">
-          <img :src="tjPlace.imgUrl"/>
-          <p>{{tjPlace.title}}</p>
+          <img :src="hotContentList.imgUrl"/>
+          <p>{{hotContentList.desc}}</p>
         </div>
         <div class="left-price">
-          限量{{tjPlace.count}}份
-          <p><span>￥</span><span class="price">{{tjPlace.price}}</span>起</p>
+          限量{{hotPriseList.num}}份
+          <p><span>￥</span><span class="price">{{hotPriseList.prise}}</span>起</p>
         </div>
       </div>
       <div class="hot-right">
-        <div class="right-list" v-for="(item,index) in rightList" :key="index">
+        <div class="right-list" v-for="(item,index) in hotTrendList" :key="index">
           <div class="list-title">
-            <h1>{{item.title}}</h1>
-            <p>{{item.content}}</p>
+            <h1>{{item.desc}}</h1>
+            <p>{{item.crite}}</p>
           </div>
           <div class="list-img">
             <img :src="item.imgUrl"/>
@@ -31,31 +31,10 @@
 <script>
     export default {
         name: "homeHot",
-      data(){
-          return {
-            tjPlace:{
-              title:'常州明都枫泽山庄大酒店，双人美食晚餐+儿童乐园+随园盆景园+欢迎水果+安睡奶+健身房',
-              imgUrl:'https://pic4.40017.cn/zzy/rimage/2016/12/15/15/LxfFsg_100x100_00.jpg',
-              time1:12,
-              time2:12,
-              time3:12,
-              count:200,
-              price:299
-            },
-            rightList:[
-              {
-                title:'温泉爆款',
-                content:'又到一年温泉季',
-                imgUrl:'https://pic5.40017.cn/01/000/65/88/rBANC1usNjyAWsDJAACkawp55dU429_100x100_00.png'
-              },
-              {
-                title:'快乐寒假',
-                content:'亲自旅行记',
-                imgUrl:'https://pic5.40017.cn/03/000/da/e4/rB5oQFwcf9GAM_o-AACKptfbYxE196_100x100_00.png'
-              }
-
-            ]
-          }
+      props:{
+        hotContentList:Object,
+        hotPriseList:Object,
+        hotTrendList:Array
       }
     }
 </script>

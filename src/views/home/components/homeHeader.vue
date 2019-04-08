@@ -4,13 +4,16 @@
         <span class="iconfont">&#xe63c;</span>
       </div>
       <div class="header-search"><span class="iconfont">&#xe70a;</span>上海海沧工业</div>
-      <div class="header-city">北京 <span class="iconfont">&#xe63a;</span></div>
+      <div class="header-city">{{city}} <span class="iconfont">&#xe63a;</span></div>
     </div>
 </template>
 
 <script>
     export default {
         name: "homeHeader",
+      props:{
+          city:String
+      },
       data(){
           return {
             headerFixed:false
