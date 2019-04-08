@@ -57,6 +57,8 @@
   .home-weekend{
     padding 10px
     box-sizing border-box
+    border-bottom:10px solid #edf0f5
+    overflow hidden
   }
 .week-title{
   text-align center

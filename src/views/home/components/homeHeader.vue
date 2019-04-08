@@ -1,5 +1,5 @@
 <template>
-    <div class="home-header">
+    <div class="home-header" :class="{'header-fixed':headerFixed}">
       <div class="header-back">
         <span class="iconfont">&#xe63c;</span>
       </div>
@@ -10,15 +10,35 @@
 
 <script>
     export default {
-        name: "homeHeader"
+        name: "homeHeader",
+      data(){
+          return {
+            headerFixed:false
+          }
+      },
+    mounted() {
+      window.addEventListener('scroll', () => {
+        // console.log(document.body.scrollTop)
+        if(document.body.scrollTop > 0){
+          this.headerFixed=true
+        }else{
+          this.headerFixed=false
+        }
+      })
+    }
     }
 </script>
 
 <style lang="stylus" scoped>
 .home-header {
-  display:flex
+  position absolute
   line-height:1rem
   text-align:center
+  top:0;
+  left:0;
+  z-index:1;
+  width:100%;
+  display flex
   .header-back {
     width:.8rem
     float:left
@@ -36,4 +56,13 @@
     width:1.5rem
   }
 }
+  .header-fixed{
+    position fixed
+    background-color #fff
+    z-index 2
+    .header-search{
+      background #eee
+    }
+    transition:background-color .3s
+  }
 </style>
