@@ -19,8 +19,7 @@
 
 
 <script>
-import BScroll from 'better-scroll'
-import BMap from 'BMap'
+  import BScroll from 'better-scroll'
     export default {
         name: "locationList",
       props:{
@@ -30,7 +29,7 @@ import BMap from 'BMap'
       },
       data(){
         return{
-          location:''
+          location:this.$store.state.city
         }
       },
       watch:{
@@ -49,16 +48,7 @@ import BMap from 'BMap'
         }
       },
       mounted(){
-        let map = new BMap.Map('allmap') // 创建地图
-        let myCity= new BMap.LocalCity() // 创建本地城市
-        myCity.get(res => {
-          if(res){
-            this.location =res.name // 获取城市
-            this.$store.commit('checkCity',res.name) // 初始化数据仓库的city值
-          }else{
-            this.location ='正在定位' // 没获取到显示‘正在定位’
-          }
-        })
+
         this.scroll = new BScroll(this.$refs.wrapper,{
           click:true, // 允许点击
           mouseWheel:{

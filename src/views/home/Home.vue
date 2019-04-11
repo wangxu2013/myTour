@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-      <home-header :city="city"></home-header>
+      <home-header></home-header>
       <home-swiper :swiperList="swiperList"></home-swiper>
       <home-catalog :iconList="iconList"></home-catalog>
       <home-hot :hotContentList="hotContentList" :hotPriseList="hotPriseList" :hotTrendList="hotTrendList"></home-hot>
@@ -21,7 +21,6 @@
         name: "Home",
       data(){
           return{
-            city:this.$store.state.city,
             swiperList:[],
             guessList:[],
             iconList:[],

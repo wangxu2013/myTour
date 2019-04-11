@@ -4,16 +4,13 @@
         <span class="iconfont">&#xe63c;</span>
       </div>
       <div class="header-search"><span class="iconfont">&#xe70a;</span>上海海沧工业</div>
-      <div class="header-city"><router-link to="/location">{{city}} <span class="iconfont">&#xe63a;</span></router-link></div>
+      <div class="header-city"><router-link to="/location">{{this.$store.state.city}} <span class="iconfont">&#xe63a;</span></router-link></div>
     </div>
 </template>
 
 <script>
     export default {
         name: "homeHeader",
-      props:{
-          city:String
-      },
       data(){
           return {
             headerFixed:false
@@ -42,7 +39,8 @@
   width:100%;
   display flex
   .header-back {
-    width:.8rem
+    width:auto
+    margin-left .2rem
     float:left
     color #fff
   }
@@ -56,7 +54,8 @@
   }
   .header-city{
     float:right
-    width:1.5rem
+    width:auto
+    padding-right .2rem
     a{
       color #fff
     }

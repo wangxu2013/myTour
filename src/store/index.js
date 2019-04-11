@@ -7,11 +7,11 @@ Vue.use(Vuex)
 let store = new Vuex.Store({
   state:{
     count:0,
-    city:'北京'
+    city:''
   },
   mutations:{
     checkCity(state,name){
-      this.state.city = name
+      state.city = name
     }
   }
 
