@@ -21,7 +21,7 @@
         name: "Home",
       data(){
           return{
-            city:'',
+            city:this.$store.state.city,
             swiperList:[],
             guessList:[],
             iconList:[],
@@ -44,7 +44,7 @@
           const result = res.data // 本地存放数据
           if(result.data){ // 获取的数据不为空
             const data=result.data // 获取data
-            this.city=data.city
+            //this.city=data.city
             this.swiperList=data.swiperList
             this.iconList=data.iconList
             this.guessList=data.guessList

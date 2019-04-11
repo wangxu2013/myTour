@@ -29,7 +29,7 @@
       mounted() {
         window.addEventListener('scroll', () => { // 添加滚动条监听
           // console.log(document.body.scrollTop)
-          if(document.body.scrollTop > 600){
+          if(document.body.scrollTop > 580 || document.documentElement.scrollTop >580){
             this.guessFixed=true
 
           }else{

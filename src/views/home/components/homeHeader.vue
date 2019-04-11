@@ -4,7 +4,7 @@
         <span class="iconfont">&#xe63c;</span>
       </div>
       <div class="header-search"><span class="iconfont">&#xe70a;</span>上海海沧工业</div>
-      <div class="header-city">{{city}} <span class="iconfont">&#xe63a;</span></div>
+      <div class="header-city"><router-link to="/location">{{city}} <span class="iconfont">&#xe63a;</span></router-link></div>
     </div>
 </template>
 
@@ -21,8 +21,7 @@
       },
     mounted() {
       window.addEventListener('scroll', () => {
-        // console.log(document.body.scrollTop)
-        if(document.body.scrollTop > 0){
+        if(document.body.scrollTop > 0 || document.documentElement.scrollTop >0){
           this.headerFixed=true
         }else{
           this.headerFixed=false
@@ -45,6 +44,7 @@
   .header-back {
     width:.8rem
     float:left
+    color #fff
   }
   .header-search{
     flex:1
@@ -57,6 +57,9 @@
   .header-city{
     float:right
     width:1.5rem
+    a{
+      color #fff
+    }
   }
 }
   .header-fixed{
@@ -65,6 +68,12 @@
     z-index 2
     .header-search{
       background #eee
+    }
+    .header-back {
+      color #333
+    }
+    .header-city a{
+      color #333
     }
     transition:background-color .3s
   }
