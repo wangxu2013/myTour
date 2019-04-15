@@ -1,6 +1,6 @@
 <template>
   <div class="home-catalog">
-    <div class="col-3" v-for="item in iconList" :key="item.id">
+    <div class="col-3" v-for="item,index in iconList" :key="item.id">
       <img class="catalog-icon" :src="item.imgUrl"  :class="item.color">
       <span class="catalog-title">{{item.desc}}</span>
     </div>
@@ -12,6 +12,8 @@
         name: "homeCatalog",
       props:{
         iconList: Array
+      },
+      methods:{
       }
     }
 </script>

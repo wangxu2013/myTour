@@ -51,7 +51,8 @@
     box-sizing border-box
     .left-title{
       line-height 30px
-      padding:5px 10px
+      padding:5px
+      overflow hidden
       .time-limit{
         display inline-block
         float:right
@@ -61,7 +62,7 @@
           color #ffffff
           background #000
           border-radius 5px
-          padding 3px
+          padding 2px
           margin 0 2px
         }
       }

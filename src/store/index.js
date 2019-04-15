@@ -7,7 +7,8 @@ Vue.use(Vuex)
 let store = new Vuex.Store({
   state:{
     count:0,
-    city:''
+    city:'',
+    index:0 // 存放点击的哪个ly-tab项
   },
   mutations:{
     checkCity(state,name){

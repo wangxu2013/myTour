@@ -3,14 +3,14 @@
       <div class="guess-title" :class="{'guess-fixed':guessFixed}">
         <span>猜你喜欢</span>
       </div>
-      <div class="guess-content" v-for="item,index in guessList" :key="index">
+      <router-link tag="div" :to="'/detial/'+item.id" class="guess-content" v-for="item,index in guessList" :key="index">
         <img :src="item.imgUrl">
         <h1>{{item.desc}}</h1>
         <p>
           饭店距景点{{item.distance}}km
           <span><em>￥</em><em class="price">{{item.prise}}</em>起</span>
         </p>
-      </div>
+      </router-link>
     </div>
 </template>
 
