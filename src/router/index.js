@@ -5,6 +5,7 @@ import Location from '@/views/location/Location'
 import Detial from '@/views/detial/Detial'
 import detialGalery from '@/views/detial/components/detialGalery'
 import Map from '@/views/detial/components/Map'
+import SassTest from '@/views/SassTest'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
           component: Map
         }
       ]
+    },
+    {
+      path: '/sassTest',
+      name: 'SassTest',
+      component: SassTest
     }
   ]
 })

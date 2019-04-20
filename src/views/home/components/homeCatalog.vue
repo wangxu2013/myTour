@@ -1,6 +1,6 @@
 <template>
   <div class="home-catalog">
-    <div class="col-3" v-for="item,index in iconList" :key="item.id">
+    <div class="col-3" v-for="item,index in iconList" :key="item.id" @click="changePage(index)">
       <img class="catalog-icon" :src="item.imgUrl"  :class="item.color">
       <span class="catalog-title">{{item.desc}}</span>
     </div>
@@ -14,6 +14,13 @@
         iconList: Array
       },
       methods:{
+        changePage(index){
+          //console.log(index)
+          if(index===0){
+            //console.log(2)
+            this.$router.push('/sassTest')
+          }
+        }
       }
     }
 </script>

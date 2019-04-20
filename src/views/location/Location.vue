@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="loading" v-show="showLoding">努力加载中...</div>
-      <location-header></location-header>
+      <location-header :cities="cities"></location-header>
       <location-list :place="place":hotCities="hotCities" :cities="cities"></location-list>
       <location-alphabet @changePlace="changePlace":alphabetList="alphabetList"></location-alphabet>
     </div>
